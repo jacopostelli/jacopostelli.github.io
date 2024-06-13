@@ -1,16 +1,16 @@
 @font-face {
-    font-family: 'Helvetica LT Std Black';
-    src: url('../font/HelveticaLTStdBlack.otf') format('opentype');
+    font-family: 'Helvetica Now Text Bold';
+    src: url('../font/HelveticaNowText-Bold.otf') format('opentype');
 }
 
 @font-face {
-    font-family: 'Helvetica LT Std Light';
-    src: url('../font/HelveticaLTStdLight.otf') format('opentype');
+    font-family: 'Helvetica Now Text Light';
+    src: url('../font/HelveticaNowText-Light.otf') format('opentype');
 }
 
 @font-face {
     font-family: 'League Spartan';
-    src: url('../font/LeagueSpartan-Medium.ttf') format('opentype'); /*Non funzionaaaaaaaa perchèèèè?*/
+    src: url('../font/LeagueSpartan-Medium.ttf') format('opentype');
 }
 
 
@@ -19,8 +19,8 @@ body{
     margin: 0;
     padding: 0;
     background-color: #FDFCFC;
-    font-family: "Helvetica LT Std Light";
-   
+    font-family: "Helvetica Now Text Light";
+    overflow-x:hidden;
 }
 
 /* Mobile Menu */
@@ -40,6 +40,13 @@ input[type="checkbox"], .checkbox-image, #labelCheckbox, #mobileMenu {
     margin: 0 auto;
 }
 
+.linkHome {
+    text-decoration: none;
+    color: black;
+    display: flex;
+    align-items: center;
+}
+
 .leftSideHeader {
     display: flex;
     align-items: center;
@@ -57,7 +64,6 @@ input[type="checkbox"], .checkbox-image, #labelCheckbox, #mobileMenu {
 
 .leftSideHeader p {
     font-size: 16px;
-    font-family: "Helvetica LT Std Light";
 }
 
 .rightSideHeader ul {
@@ -180,7 +186,6 @@ input[type="checkbox"], .checkbox-image, #labelCheckbox, #mobileMenu {
     border: 2px solid transparent;
     color: white;
     border-radius: 30px;
-
     transition: 0.3s;
 }
 
@@ -254,11 +259,10 @@ input[type="checkbox"], .checkbox-image, #labelCheckbox, #mobileMenu {
     right: 160px;
     margin: 0;
 }
-.button-video {
+.button-video, .button-artworks, .button-foto {
     position: absolute;
     bottom:  0px;
-    right: 170px; 
-    background-color: #7B8CDE;
+    right: 170px;
     color: white;
     padding: 17px 33px;
     border: none;
@@ -266,34 +270,41 @@ input[type="checkbox"], .checkbox-image, #labelCheckbox, #mobileMenu {
     cursor: pointer;
     font-size: 24px;
     font-weight:bold;
+    transition: 0.3s;
+    border: 2px solid transparent;
 }
+
+.button-video { 
+    background-color: #7B8CDE;
+}
+
 .button-artworks {
     background-color: #9999C3;
-    position: absolute;
-    bottom:  0px;
-    right: 170px;
-    color: white;
-    padding: 17px 33px; 
-    border: none;
-    border-radius: 30px;
-    cursor: pointer;
-    font-size: 24px; 
-    font-weight:bold;
 }
 .button-foto {
-    background-color: #C0E6DE;
-    position: absolute;
-    bottom:  0px; 
-    right: 170px; 
-    color: white;
-    padding: 17px 33px; 
-    border: none;
-    border-radius: 30px;
-    cursor: pointer;
-    font-size: 24px; 
-    font-weight:bold;
-    
+    background-color: #C0E6DE; 
 }
+
+.button-video:hover{ 
+    background-color: #ffffff;
+    color: #7B8CDE;
+    border: 2px solid #7B8CDE;
+    transition: 0.3s;
+}
+
+.button-artworks:hover{
+    background-color: #ffffff;
+    color: #9999C3;
+    border: 2px solid #9999C3;
+    transition: 0.3s;
+}
+.button-foto:hover{
+    background-color: #ffffff; 
+    color: #C0E6DE; 
+    border: 2px solid #C0E6DE;
+    transition: 0.3s;
+}
+
 
 .section {
     position: relative;
@@ -339,9 +350,12 @@ hr {
     justify-content: space-between;
     align-items: flex-start;
     width: 80%;
-    margin: 3% auto 25% 15%;
+    margin: 3% auto 25%;
     padding: 20px; /**/
     
+}
+.leftSideContainerProject {
+    width:100%;
 }
 
 .leftSideContainerProject h1 {
@@ -350,7 +364,7 @@ hr {
 }
 
 .project-description{
-    width: 70%;
+    width: 100%;
     line-height: 170%;
 }
 
@@ -363,9 +377,13 @@ hr {
     width: 100%;         
     text-align: right;
 }
+.rightSideContainer video{
+    width: 90%;
+    position:relative;
+}
 
 .rightSideContainer img {
-    width: 100%;
+    width: 90%;
     border-radius: 10px;
 }
 
@@ -573,7 +591,7 @@ footer h4 {
         right: 20px;
         top: 20px;
         font-size: 22px;
-        font-family: 'Helvetica LT Std Black';
+        font-family: 'Helvetica Now Text Bold';
         cursor: pointer;
         transition: 0.3s;
     }
