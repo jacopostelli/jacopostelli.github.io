@@ -45,7 +45,10 @@ input[type="checkbox"], .checkbox-image, #labelCheckbox, #mobileMenu {
     align-items: center;
 }
 
-#spartano{font-family: 'League Spartan';}
+#spartano{
+    font-family: 'League Spartan';
+    font-size: 13pt;
+}
 
 .leftSideHeader img {
     height: 30px;
@@ -239,7 +242,7 @@ input[type="checkbox"], .checkbox-image, #labelCheckbox, #mobileMenu {
 }
 
 .second {
-    margin-top: 290px;
+    margin-top: 400px;
 }
 
 
@@ -323,6 +326,9 @@ input[type="checkbox"], .checkbox-image, #labelCheckbox, #mobileMenu {
 
 hr {
    width: 90%;
+   border: none;
+   border-top: 1px solid black;
+  
 }
 
 
@@ -373,7 +379,7 @@ hr {
     justify-content: space-between;
     align-items: flex-start;
     width: 80%;
-    margin: 3% auto 25% 15%;
+    margin: 0% auto 0% 15%;
     padding: 20px;
 }
 
@@ -418,12 +424,6 @@ hr {
     z-index: -1;
 }
 
-
-hr {
-    margin: 20px 0;
-    border: 0;
-    border-top: 1px solid #ddd;
-}
 
 /*FOOTER*/
 
@@ -471,7 +471,7 @@ footer h4 {
 .social-media a {
     text-decoration: none;
     color: black;
-    font-size: 10px;
+    font-size: 15px;
 }
 
 .social-media a:hover {
@@ -771,6 +771,7 @@ footer h4 {
     .second {
     position: relative;
     left: 0px;
+    margin-top: 290px;
     }
 
     .description{
@@ -873,41 +874,39 @@ footer h4 {
         margin-top: -150px;
     }
 
-    /*FOOTERR*/
+    /*FOOTER*/
 
     .social-media {
-        flex-direction: column; /* Imposta la direzione dell'elenco in verticale */
-        align-items: flex-start; /* Allinea gli elementi a sinistra */
+        flex-direction: column;
+        align-items: flex-start;
       }
     
       .social-media li {
-        margin-right: 0; /* Rimuovi il margine destro */
-        margin-bottom: 10px; /* Aggiungi un margine inferiore */
-        display: flex; /* Utilizza il display flex per allineare l'icona e il testo */
-        align-items: center; /* Allinea l'icona e il testo verticalmente */
+        margin-right: 0;
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
       }
     
       .social-media li::before {
-        content: ""; /* Aggiungi un contenuto vuoto per creare uno pseudo-elemento */
-        display: inline-block; /* Rendi lo pseudo-elemento un elemento in linea */
-        width: 40px; /* Imposta la larghezza desiderata per l'icona */
-        height: 40px; /* Imposta l'altezza desiderata per l'icona */
-        margin-right: 10px; /* Aggiungi un margine destro per separare l'icona dal testo */
-        background-size: contain; /* Ridimensiona l'immagine dell'icona per adattarla alle dimensioni */
-        background-repeat: no-repeat; /* Evita la ripetizione dell'immagine */
+        content: "";
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        margin-right: 10px;
+        background-size: contain;
+        background-repeat: no-repeat;
       }
-    
-      /* Aggiungi le immagini delle icone dei social media utilizzando lo pseudo-elemento ::before */
       .social-media li:nth-child(1)::before {
         background-image: url('../img/Mail.png');
-        background-size: 100%; /* Sostituisci con il percorso dell'icona email */
+        background-size: 100%;
       }
       .social-media li:nth-child(2)::before {
         background-image: url('../img/whatsapp.svg');
-        background-size: 100%; /* Sostituisci con il percorso dell'icona WhatsApp */
+        background-size: 100%;
       }
       .social-media li:nth-child(3)::before {
         background-image: url('../img/Instagram.svg');
-        background-size: 100%; /* Sostituisci con il percorso dell'icona Instagram */
+        background-size: 100%;
       }
 } 
